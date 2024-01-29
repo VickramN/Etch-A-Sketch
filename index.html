@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SketchPad</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container" id="grid"></div>
+    <section class="wrapper">
+        <div class="top">Etch-A-Sketch</div>
+        <div class="bottom" aria-hidden="true">Etch-A-Sketch</div>
+      </section>
+    <div id="sketch-area" class="container" >
+    </div>
+    <form id="gridQuery" onsubmit="createGrid(); return false">
+        <input type="number" id="gridDimensions" name="gridDimensions" max="100" min="1">
+        <input type="submit" value="Submit">
+        <button onclick="clear()">Erase</button>
+    </form>
     <script src="script.js"></script>
 </body>
 </html>

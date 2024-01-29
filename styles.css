@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+#sketch-area{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    margin-bottom: 50px;
+    background-color: #8bbe1b;
+}
+
+
+
+.cell{
+    border: 1px solid black;
+}
+
+.cell:hover{
+    background-color: black;
+}
+
+#gridQuery{
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    display: grid;
+    place-content: center;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+  
+
+  :root {
+    --background-color: blanchedalmond;
+    --text-color: hsl(0, 0%, 100%);
+  }
+  body {
+    margin: 0;
+  }
+
+  .wrapper{
+    font-size: 100px;
+  }
+  .wrapper > div {
+    grid-area: 1/1/-1/-1;
+  }
+  .top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  }
+  .bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, blanchedalmond 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, blanchedalmond 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+  }
+  
